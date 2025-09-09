@@ -18,12 +18,6 @@ public class Movement : MonoBehaviour
         float moveZ = Input.GetAxisRaw("Vertical");
 
         movement = new Vector3(moveX, 0f, moveZ).normalized;
-
-        if (movement != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movement, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 720 * Time.deltaTime);
-        }
     }
 
     void FixedUpdate()

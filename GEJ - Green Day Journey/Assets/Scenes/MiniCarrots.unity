@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCenoura: {fileID: 3559431964976349065, guid: b95e0258a9ee9b74f85f4b84fec71bb6, type: 3}
-  prefabPedra: {fileID: 5513366448123073031, guid: b5bc4bc1db19f0a44af21534281d981c, type: 3}
+  prefabPedra: {fileID: 2673396733798500908, guid: 33a11c4f8242de54fb96b6e17a09ae7c, type: 3}
   pontosSpawn:
   - {fileID: 106111677}
   - {fileID: 1600373767}
