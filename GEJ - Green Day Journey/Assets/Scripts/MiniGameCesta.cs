@@ -13,6 +13,8 @@ public class MiniGameCesta : MonoBehaviour
     private int alvo = 8;
     private bool transicaoIniciada = false;
 
+    public RectTransform[] prateleiras; // todas as prateleiras no inspector
+
     void Awake()
     {
         Instance = this;
