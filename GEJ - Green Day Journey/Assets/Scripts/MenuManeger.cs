@@ -3,16 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Função para carregar a cena do jogo
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game"); // Nome da cena
+        SceneManager.LoadScene("Game");
     }
 
-    // Função para sair do jogo
     public void QuitGame()
     {
-        Debug.Log("Saiu do jogo!"); // Aparece no editor
-        Application.Quit(); // Fecha o jogo no build
+        Debug.Log("Saiu do jogo!");
+        Application.Quit();
+    }
+
+    public void ResetarCena()
+    {
+        Scene cenaAtual = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(cenaAtual.name);
     }
 }

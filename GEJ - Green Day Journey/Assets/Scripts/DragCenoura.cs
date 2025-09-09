@@ -1,54 +1,66 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DragCenoura : MonoBehaviour
+public class DragCenoura : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private bool segurando = false;
-    private Vector3 offset;
-    private Transform colisorDestino;
     private bool preso = false;
+    private RectTransform rectTransform;
+    private Canvas canvas;
+    private Vector3 posicaoInicial;
 
-    void OnMouseDown()
+    void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
+        posicaoInicial = rectTransform.position;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (preso) return;
         segurando = true;
-        offset = transform.position - GetMouseWorldPos();
     }
 
-    void OnMouseUp()
+    public void OnPointerUp(PointerEventData eventData)
     {
-        if (!segurando) return;
+        if (preso) return;
         segurando = false;
+        GameObject[] prateleiras = GameObject.FindGameObjectsWithTag("Colisor");
 
-        if (colisorDestino != null)
+        foreach (GameObject go in prateleiras)
         {
-            transform.position = colisorDestino.position;
-            preso = true;
-            MiniGameCesta.Instance.CenouraColocada();
+            RectTransform prateleira = go.GetComponent<RectTransform>();
+            Prateleira p = go.GetComponent<Prateleira>();
+
+            if (RectTransformUtility.RectangleContainsScreenPoint(prateleira, Input.mousePosition, canvas.worldCamera))
+            {
+                if (p != null && !p.ocupada)
+                {
+                    rectTransform.position = prateleira.position;
+                    preso = true;
+                    p.ocupada = true;
+                    MiniGameCesta.Instance.CenouraColocada();
+
+                    TimerCenouras timer = FindObjectOfType<TimerCenouras>();
+                    if (timer != null)
+                        timer.AdicionarTempoPorCenoura();
+
+                    return;
+                }
+            }
         }
+
+        rectTransform.position = posicaoInicial;
     }
 
     void Update()
     {
-        if (segurando)
-            transform.position = GetMouseWorldPos() + offset;
-    }
-
-    Vector3 GetMouseWorldPos()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10f; 
-        return Camera.main.ScreenToWorldPoint(mousePos);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Colisor"))
-            colisorDestino = other.transform;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Colisor"))
-            colisorDestino = null;
+        if (segurando && !preso)
+        {
+            Vector3 mousePos;
+            RectTransformUtility.ScreenPointToWorldPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, canvas.worldCamera, out mousePos);
+            rectTransform.position = mousePos;
+        }
     }
 }
