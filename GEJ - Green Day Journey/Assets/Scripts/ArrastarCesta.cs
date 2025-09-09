@@ -3,15 +3,11 @@ using UnityEngine;
 public class ArrastarCesta : MonoBehaviour
 {
     public float velocidade = 5f;
-
-    // Limites do movimento
-    public float minX = -5f;
-    public float maxX = 5f;
-    public float minZ = -5f;
-    public float maxZ = 5f;
-
     private Rigidbody rbCesta;
     private float alturaFixa;
+
+    private float minX;
+    private float maxX;
 
     void Start()
     {
@@ -22,22 +18,33 @@ public class ArrastarCesta : MonoBehaviour
         rbCesta.useGravity = false;
         rbCesta.constraints = RigidbodyConstraints.FreezeRotation;
 
-        alturaFixa = transform.position.y; // mantém altura fixa
+        alturaFixa = transform.position.y;
+
+        CalcularLimites();
     }
 
     void FixedUpdate()
     {
-        float eixoX = Input.GetAxis("Horizontal"); // setas ou A/D
-        float eixoZ = Input.GetAxis("Vertical");   // setas ou W/S
+        float eixoX = Input.GetAxis("Horizontal");
 
-        Vector3 movimento = new Vector3(eixoX, 0, eixoZ) * velocidade * Time.fixedDeltaTime;
+        Vector3 movimento = new Vector3(eixoX, 0, 0) * velocidade * Time.fixedDeltaTime;
         Vector3 novaPosicao = rbCesta.position + movimento;
 
-        // Limita a posição dentro dos limites definidos
-        novaPosicao.x = Mathf.Clamp(novaPosicao.x, minX, maxX);
-        novaPosicao.z = Mathf.Clamp(novaPosicao.z, minZ, maxZ);
         novaPosicao.y = alturaFixa;
+        novaPosicao.z = rbCesta.position.z;
+
+        novaPosicao.x = Mathf.Clamp(novaPosicao.x, minX, maxX);
 
         rbCesta.MovePosition(novaPosicao);
+    }
+
+    void CalcularLimites()
+    {
+        Camera cam = Camera.main;
+        float distancia = Mathf.Abs(cam.transform.position.z - transform.position.z);
+        Vector3 limiteEsquerdo = cam.ViewportToWorldPoint(new Vector3(0, 0, distancia));
+        Vector3 limiteDireito = cam.ViewportToWorldPoint(new Vector3(1, 0, distancia));
+        minX = limiteEsquerdo.x + 0.5f;
+        maxX = limiteDireito.x - 0.5f;
     }
 }

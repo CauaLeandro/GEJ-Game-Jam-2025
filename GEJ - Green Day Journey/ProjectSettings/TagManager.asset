@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Pegavel
+  - Cenoura
+  - Pedra
+  - Colisor
   layers:
   - Default
   - TransparentFX
