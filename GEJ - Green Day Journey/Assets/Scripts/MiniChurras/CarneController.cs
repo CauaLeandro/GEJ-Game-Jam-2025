@@ -38,7 +38,7 @@ public class CarneController : MonoBehaviour
     public float tempoMaximoQueimar = 3f;
 
     [Header("Proporção de tempo antes de piscar (0-1)")]
-    public float proporcaoAviso = 0.3f; // começa a piscar quando faltar 30% do tempo
+    public float proporcaoAviso = 0.3f; 
 
     private bool jogoAcabou = false;
 
@@ -135,7 +135,6 @@ public class CarneController : MonoBehaviour
         }
         else
         {
-            // penalidade: clicar antes do tempo zera o progresso
             carne.tempoAtual = 0f;
             carne.slider.value = 0f;
         }
