@@ -14,15 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniCarrots.unity
     guid: 5956d7e05be91674fb0abb4844ec7f8d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game2.unity
-    guid: 29f7ac785df8b994a8fced86dc39ab6a
+    guid: b94227fe1f4abc44e96bec8ac97566b6
   - enabled: 1
     path: Assets/Scenes/MiniMarcket.unity
     guid: 086e434307f22394caa44a88510844cd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game3.unity
-    guid: 129439e6114550d429cdc24839a2c224
+    guid: 2768162098389d543ae514e5ea5d72cc
+  - enabled: 1
+    path: Assets/Scenes/MiniChurras.unity
+    guid: 8dd0842b4b8182346a3c4e1f0138f827
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
