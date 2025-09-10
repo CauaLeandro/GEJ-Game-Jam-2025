@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.791}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214, y: -323}
+  m_AnchoredPosition: {x: -163, y: -322.00003}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &34499527
@@ -597,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -302}
+  m_AnchoredPosition: {x: -9, y: -301}
   m_SizeDelta: {x: 292.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242371168
@@ -731,7 +731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.791}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -697, y: 171}
+  m_AnchoredPosition: {x: -758, y: 170}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &400080130
@@ -1603,7 +1603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 431, y: -302}
+  m_AnchoredPosition: {x: 546, y: -333}
   m_SizeDelta: {x: 292.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845551073
@@ -1751,7 +1751,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
   m_Resource: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2689,7 +2689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.791}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -224, y: 177}
+  m_AnchoredPosition: {x: -171, y: 234}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1389947802
@@ -2726,8 +2726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.00028229, y: -0.00042725}
+  m_SizeDelta: {x: 85.28, y: 47.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389947804
 MonoBehaviour:
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 249e77c46ec4c9c4e9c990d486d8dbe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2802,7 +2802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: 186}
+  m_AnchoredPosition: {x: 548, y: 186}
   m_SizeDelta: {x: 292.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458638525
@@ -3158,11 +3158,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
     somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3172,8 +3169,7 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   - carneButton: {fileID: 2130120328}
     slider: {fileID: 1380021487}
     painelQueimou: {fileID: 1074073470}
@@ -3182,11 +3178,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
     somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3196,8 +3189,7 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   - carneButton: {fileID: 2092774455}
     slider: {fileID: 358574043}
     painelQueimou: {fileID: 1074073470}
@@ -3206,11 +3198,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
-    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3220,8 +3209,7 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   - carneButton: {fileID: 1547583401}
     slider: {fileID: 34499528}
     painelQueimou: {fileID: 1074073470}
@@ -3230,11 +3218,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
     somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3244,8 +3229,7 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   - carneButton: {fileID: 242371168}
     slider: {fileID: 25579635}
     painelQueimou: {fileID: 1074073470}
@@ -3254,11 +3238,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
-    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3268,8 +3249,7 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   - carneButton: {fileID: 845551073}
     slider: {fileID: 2045279098}
     painelQueimou: {fileID: 1074073470}
@@ -3278,11 +3258,8 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
-    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
-    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
-    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
-    tempoQueimarMin: 4
-    tempoQueimarMax: 5
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
     audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
@@ -3292,14 +3269,15 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
-    somQueimandoTocado: 0
-    somProntaTocado: 0
+    somQueimandoAtivo: 0
   fadeImage: {fileID: 1628841011}
   proximaCena: Game
   fadeDuration: 2
   proporcaoAviso: 0.3
   tempoMinimoCozinhar: 5
   tempoMaximoCozinhar: 7
+  tempoMinimoQueimar: 3
+  tempoMaximoQueimar: 5
 --- !u!1 &1628841009
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3289,7 @@ GameObject:
   - component: {fileID: 1628841010}
   - component: {fileID: 1628841012}
   - component: {fileID: 1628841011}
+  - component: {fileID: 1628841013}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3375,6 +3354,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628841009}
   m_CullTransparentMesh: 1
+--- !u!82 &1628841013
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628841009}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1643952685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231, y: 177}
+  m_AnchoredPosition: {x: 399.00003, y: 177}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643952687
@@ -3817,7 +3893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.791}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: -320}
+  m_AnchoredPosition: {x: 396, y: -318}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2092774451
@@ -3893,7 +3969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -525, y: 186}
+  m_AnchoredPosition: {x: -586, y: 185}
   m_SizeDelta: {x: 292.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092774455
@@ -4049,7 +4125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: 226}
+  m_AnchoredPosition: {x: -15, y: 227}
   m_SizeDelta: {x: 292.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130120328
