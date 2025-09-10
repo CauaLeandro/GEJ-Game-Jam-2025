@@ -10,6 +10,13 @@ public class CarneData
     public Slider slider;
     public GameObject painelQueimou;
 
+    [Header("Sprites")]
+    public Image carneImage;       
+    public Sprite spriteNormal;    
+    public Sprite spriteVirada;    
+    public Sprite spriteQueimada;  
+    public Sprite spritePronta;    
+
     [HideInInspector] public float tempoAtual = 0f;
     [HideInInspector] public bool noMaximo = false;
     [HideInInspector] public float tempoMaximo = 0f;
@@ -38,7 +45,7 @@ public class CarneController : MonoBehaviour
     public float tempoMaximoQueimar = 3f;
 
     [Header("Proporção de tempo antes de piscar (0-1)")]
-    public float proporcaoAviso = 0.3f; 
+    public float proporcaoAviso = 0.3f;
 
     private bool jogoAcabou = false;
 
@@ -62,6 +69,9 @@ public class CarneController : MonoBehaviour
 
             if (carne.slider.fillRect != null)
                 carne.fillImage = carne.slider.fillRect.GetComponent<Image>();
+
+            if (carne.carneImage != null)
+                carne.carneImage.sprite = carne.spriteNormal;
 
             carne.carneButton.onClick.AddListener(() => VirarCarne(carne));
         }
@@ -100,6 +110,9 @@ public class CarneController : MonoBehaviour
                 if (carne.tempoMaximo >= carne.tempoQueimar)
                 {
                     carne.painelQueimou.SetActive(true);
+                    if (carne.carneImage != null)
+                        carne.carneImage.sprite = carne.spriteQueimada;
+
                     jogoAcabou = true;
                 }
             }
@@ -128,9 +141,14 @@ public class CarneController : MonoBehaviour
             if (carne.fillImage != null)
                 carne.fillImage.color = Color.white;
 
-            if (carne.ladosVirados >= 4)
+            if (carne.carneImage != null)
+                carne.carneImage.sprite = carne.spriteVirada; // vira o lado
+
+            if (carne.ladosVirados >= 2)
             {
                 carne.terminou = true;
+                if (carne.carneImage != null)
+                    carne.carneImage.sprite = carne.spritePronta; // carne pronta
             }
         }
         else
