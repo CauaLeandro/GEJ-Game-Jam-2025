@@ -1721,6 +1721,135 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &910861016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910861018}
+  - component: {fileID: 910861017}
+  m_Layer: 0
+  m_Name: fogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &910861017
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910861016}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &910861018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910861016}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3, y: -8.906605, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970014603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,6 +3158,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3037,6 +3172,8 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   - carneButton: {fileID: 2130120328}
     slider: {fileID: 1380021487}
     painelQueimou: {fileID: 1074073470}
@@ -3045,6 +3182,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3053,6 +3196,8 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   - carneButton: {fileID: 2092774455}
     slider: {fileID: 358574043}
     painelQueimou: {fileID: 1074073470}
@@ -3061,6 +3206,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3069,6 +3220,8 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   - carneButton: {fileID: 1547583401}
     slider: {fileID: 34499528}
     painelQueimou: {fileID: 1074073470}
@@ -3077,6 +3230,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 8013d0429944f714cb251290bad89c06, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3085,6 +3244,8 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   - carneButton: {fileID: 242371168}
     slider: {fileID: 25579635}
     painelQueimou: {fileID: 1074073470}
@@ -3093,6 +3254,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3101,6 +3268,8 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   - carneButton: {fileID: 845551073}
     slider: {fileID: 2045279098}
     painelQueimou: {fileID: 1074073470}
@@ -3109,6 +3278,12 @@ MonoBehaviour:
     spriteVirada: {fileID: 21300000, guid: a3fcf733499085b44a26519ca50bf45c, type: 3}
     spriteQueimada: {fileID: 21300000, guid: 64926f9d2f6501f498a6f79a67245d1e, type: 3}
     spritePronta: {fileID: 21300000, guid: f0bab3e91f1d8a744903adfbbee8e68b, type: 3}
+    somProntaParaVirar: {fileID: 8300000, guid: 0c2f28d66d12b2b4883ce1677e0413aa, type: 3}
+    somQueimando: {fileID: 8300000, guid: 2bf5890ebf3d2a24c8b289d443fcfb9e, type: 3}
+    somProntaCozida: {fileID: 8300000, guid: 55c6ba055bd83fb4c882c332176a12e7, type: 3}
+    tempoQueimarMin: 4
+    tempoQueimarMax: 5
+    audioSource: {fileID: 0}
     tempoAtual: 0
     noMaximo: 0
     tempoMaximo: 0
@@ -3117,14 +3292,14 @@ MonoBehaviour:
     tempoParaCozinhar: 0
     tempoQueimar: 0
     fillImage: {fileID: 0}
+    somQueimandoTocado: 0
+    somProntaTocado: 0
   fadeImage: {fileID: 1628841011}
   proximaCena: Game
   fadeDuration: 2
-  tempoMinimoCozinhar: 3
-  tempoMaximoCozinhar: 7
-  tempoMinimoQueimar: 3
-  tempoMaximoQueimar: 4
   proporcaoAviso: 0.3
+  tempoMinimoCozinhar: 5
+  tempoMaximoCozinhar: 7
 --- !u!1 &1628841009
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,3 +4104,4 @@ SceneRoots:
   - {fileID: 809655689}
   - {fileID: 1549173777}
   - {fileID: 2023649533}
+  - {fileID: 910861018}
