@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bfda70a2c5758d847ac7991fdd537057
+guid: 6b337cb80c9b9414db2e708564d7c866
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dona rosa1_0
+      name: pimpimesquerda_0
       rect:
         serializedVersion: 2
         x: 0
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9618c48d6cef600449cc4272c1eacbe8
-      internalID: 1813245979
+      spriteID: 770fd5752e8e8514fb5b34fc04766038
+      internalID: 807938082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dona rosa1_1
+      name: pimpimesquerda_1
       rect:
         serializedVersion: 2
         x: 64
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4fd5d01f187d6043998fb3197f1e9f0
-      internalID: 10167902
+      spriteID: 65db6fe88a68222409abc4ee54145f2a
+      internalID: -268503725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dona rosa1_2
+      name: pimpimesquerda_2
       rect:
         serializedVersion: 2
         x: 0
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e765253a810dd45bb56f7e43f77023
-      internalID: -1998274699
+      spriteID: da163f744e90b574d96fd9197026ff97
+      internalID: -416192317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dona rosa1_3
+      name: pimpimesquerda_3
       rect:
         serializedVersion: 2
         x: 64
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e4b638605ea064ca36f399b0aec3fb
-      internalID: -383087678
+      spriteID: 69b283cceb2b4864d979d24cdab53234
+      internalID: -522828748
       vertices: []
       indices: 
       edges: []
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 624b30e5ec28faa4cb1028299726cd26
+    spriteID: 1115c320013f0e244a2fa3e497379a3c
     internalID: 0
     vertices: []
     indices: 
@@ -224,10 +224,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dona rosa1_0: 1813245979
-      dona rosa1_1: 10167902
-      dona rosa1_2: -1998274699
-      dona rosa1_3: -383087678
+      pimpimesquerda_0: 807938082
+      pimpimesquerda_1: -268503725
+      pimpimesquerda_2: -416192317
+      pimpimesquerda_3: -522828748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

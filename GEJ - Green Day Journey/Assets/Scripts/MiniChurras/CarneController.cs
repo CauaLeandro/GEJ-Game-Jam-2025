@@ -11,11 +11,17 @@ public class CarneData
     public GameObject painelQueimou;
 
     [Header("Sprites")]
-    public Image carneImage;       
-    public Sprite spriteNormal;    
-    public Sprite spriteVirada;    
-    public Sprite spriteQueimada;  
-    public Sprite spritePronta;    
+    public Image carneImage;
+    public Sprite spriteNormal;
+    public Sprite spriteVirada;
+    public Sprite spriteQueimada;
+    public Sprite spritePronta;
+
+    [Header("Áudio")]
+    public AudioClip somQueimando;
+    public AudioClip somCozida;
+
+    [HideInInspector] public AudioSource audioSource;
 
     [HideInInspector] public float tempoAtual = 0f;
     [HideInInspector] public bool noMaximo = false;
@@ -27,6 +33,7 @@ public class CarneData
     [HideInInspector] public float tempoQueimar = 0f;
 
     [HideInInspector] public Image fillImage;
+    [HideInInspector] public bool somQueimandoAtivo = false;
 }
 
 public class CarneController : MonoBehaviour
@@ -35,17 +42,19 @@ public class CarneController : MonoBehaviour
     public Image fadeImage;
     public string proximaCena = "Game";
     public float fadeDuration = 2f;
+    public float proporcaoAviso = 0.3f;
 
-    [Header("Intervalo de tempo de cozimento por lado")]
+    [Header("Tempo de cozinhar (por lado)")]
     public float tempoMinimoCozinhar = 3f;
     public float tempoMaximoCozinhar = 7f;
 
-    [Header("Intervalo de tempo para queimar")]
-    public float tempoMinimoQueimar = 1.5f;
-    public float tempoMaximoQueimar = 3f;
+    [Header("Tempo de queimar após cozinhar")]
+    public float tempoMinimoQueimar = 2f;
+    public float tempoMaximoQueimar = 5f;
 
-    [Header("Proporção de tempo antes de piscar (0-1)")]
-    public float proporcaoAviso = 0.3f;
+    [Header("Controle de áudio")]
+    [Range(0f, 1f)]
+    public float volumeSom = 1f; // Volume ajustável
 
     private bool jogoAcabou = false;
 
@@ -73,6 +82,9 @@ public class CarneController : MonoBehaviour
             if (carne.carneImage != null)
                 carne.carneImage.sprite = carne.spriteNormal;
 
+            carne.audioSource = carne.carneImage.gameObject.AddComponent<AudioSource>();
+            carne.audioSource.volume = volumeSom; // Aplica o volume inicial
+
             carne.carneButton.onClick.AddListener(() => VirarCarne(carne));
         }
     }
@@ -80,6 +92,13 @@ public class CarneController : MonoBehaviour
     void Update()
     {
         if (jogoAcabou) return;
+
+        // Atualiza volume em tempo real
+        foreach (var carne in carnes)
+        {
+            if (carne.audioSource != null)
+                carne.audioSource.volume = volumeSom;
+        }
 
         foreach (var carne in carnes)
         {
@@ -90,7 +109,7 @@ public class CarneController : MonoBehaviour
                 carne.tempoAtual += Time.deltaTime;
                 carne.slider.value = carne.tempoAtual / carne.tempoParaCozinhar;
 
-                if (carne.slider.value >= 1)
+                if (carne.slider.value >= 1f)
                 {
                     carne.noMaximo = true;
                     carne.tempoMaximo = 0f;
@@ -99,12 +118,23 @@ public class CarneController : MonoBehaviour
             else
             {
                 carne.tempoMaximo += Time.deltaTime;
-
                 float restante = carne.tempoQueimar - carne.tempoMaximo;
+
                 if (restante <= carne.tempoQueimar * proporcaoAviso && carne.fillImage != null)
                 {
                     float t = Mathf.PingPong(Time.time * 6f, 1f);
                     carne.fillImage.color = Color.Lerp(Color.white, Color.red, t);
+
+                    if (!carne.somQueimandoAtivo)
+                    {
+                        carne.somQueimandoAtivo = true;
+                        if (carne.somQueimando != null)
+                        {
+                            carne.audioSource.loop = true;
+                            carne.audioSource.clip = carne.somQueimando;
+                            carne.audioSource.Play();
+                        }
+                    }
                 }
 
                 if (carne.tempoMaximo >= carne.tempoQueimar)
@@ -129,32 +159,43 @@ public class CarneController : MonoBehaviour
     {
         if (jogoAcabou || carne.terminou) return;
 
-        if (carne.noMaximo)
+        if (!carne.noMaximo)
         {
-            carne.ladosVirados++;
+            // Penalidade: resetar o progresso da carne se clicar antes da hora
             carne.tempoAtual = 0f;
             carne.slider.value = 0f;
-            carne.noMaximo = false;
+            carne.carneImage.sprite = carne.spriteNormal;
+            return;
+        }
 
-            carne.tempoParaCozinhar = Random.Range(tempoMinimoCozinhar, tempoMaximoCozinhar);
+        carne.ladosVirados++;
+        carne.tempoAtual = 0f;
+        carne.slider.value = 0f;
+        carne.noMaximo = false;
 
-            if (carne.fillImage != null)
-                carne.fillImage.color = Color.white;
+        carne.tempoParaCozinhar = Random.Range(tempoMinimoCozinhar, tempoMaximoCozinhar);
+        carne.tempoQueimar = Random.Range(tempoMinimoQueimar, tempoMaximoQueimar);
+
+        carne.somQueimandoAtivo = false;
+        carne.audioSource.Stop();
+
+        if (carne.fillImage != null)
+            carne.fillImage.color = Color.white;
+
+        if (carne.ladosVirados >= 2)
+        {
+            carne.terminou = true;
 
             if (carne.carneImage != null)
-                carne.carneImage.sprite = carne.spriteVirada; // vira o lado
+                carne.carneImage.sprite = carne.spritePronta;
 
-            if (carne.ladosVirados >= 2)
-            {
-                carne.terminou = true;
-                if (carne.carneImage != null)
-                    carne.carneImage.sprite = carne.spritePronta; // carne pronta
-            }
+            if (carne.audioSource != null && carne.somCozida != null)
+                carne.audioSource.PlayOneShot(carne.somCozida);
         }
         else
         {
-            carne.tempoAtual = 0f;
-            carne.slider.value = 0f;
+            if (carne.carneImage != null)
+                carne.carneImage.sprite = carne.spriteVirada;
         }
     }
 
