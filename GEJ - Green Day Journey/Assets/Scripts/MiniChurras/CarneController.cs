@@ -52,6 +52,10 @@ public class CarneController : MonoBehaviour
     public float tempoMinimoQueimar = 2f;
     public float tempoMaximoQueimar = 5f;
 
+    [Header("Controle de áudio")]
+    [Range(0f, 1f)]
+    public float volumeSom = 1f; // Volume ajustável
+
     private bool jogoAcabou = false;
 
     void Start()
@@ -79,6 +83,7 @@ public class CarneController : MonoBehaviour
                 carne.carneImage.sprite = carne.spriteNormal;
 
             carne.audioSource = carne.carneImage.gameObject.AddComponent<AudioSource>();
+            carne.audioSource.volume = volumeSom; // Aplica o volume inicial
 
             carne.carneButton.onClick.AddListener(() => VirarCarne(carne));
         }
@@ -87,6 +92,13 @@ public class CarneController : MonoBehaviour
     void Update()
     {
         if (jogoAcabou) return;
+
+        // Atualiza volume em tempo real
+        foreach (var carne in carnes)
+        {
+            if (carne.audioSource != null)
+                carne.audioSource.volume = volumeSom;
+        }
 
         foreach (var carne in carnes)
         {
@@ -117,9 +129,11 @@ public class CarneController : MonoBehaviour
                     {
                         carne.somQueimandoAtivo = true;
                         if (carne.somQueimando != null)
+                        {
                             carne.audioSource.loop = true;
-                        carne.audioSource.clip = carne.somQueimando;
-                        carne.audioSource.Play();
+                            carne.audioSource.clip = carne.somQueimando;
+                            carne.audioSource.Play();
+                        }
                     }
                 }
 

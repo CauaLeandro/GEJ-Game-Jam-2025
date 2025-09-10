@@ -6,10 +6,12 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
     private Vector3 movement;
+    public Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>(); 
     }
 
     void Update()
@@ -18,6 +20,11 @@ public class Movement : MonoBehaviour
         float moveZ = Input.GetAxisRaw("Vertical");
 
         movement = new Vector3(moveX, 0f, moveZ).normalized;
+
+        
+        animator.SetFloat("Horizontal", moveX);
+        animator.SetFloat("Vertical", moveZ);
+        animator.SetFloat("Speed", movement.magnitude);
     }
 
     void FixedUpdate()
