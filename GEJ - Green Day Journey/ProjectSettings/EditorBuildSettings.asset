@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scripts/MiniChurras/MiniChurras.unity
     guid: 8dd0842b4b8182346a3c4e1f0138f827
+  - enabled: 1
+    path: Assets/Scenes/Game4.unity
+    guid: 975fe79a863d586469e2a56e51f1a90e
+  - enabled: 1
+    path: Assets/Scripts/MiniCraft/MiniCraft.unity
+    guid: b91f20b2b8823c04e894ceda867a503f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
