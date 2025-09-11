@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DonaRosa
+  m_Name: Dona_Rosa
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -24,12 +24,12 @@ AnimationClip:
       value: {fileID: 1813245979, guid: bfda70a2c5758d847ac7991fdd537057, type: 3}
     - time: 0.3
       value: {fileID: 10167902, guid: bfda70a2c5758d847ac7991fdd537057, type: 3}
-    - time: 0.56666666
+    - time: 0.6166667
       value: {fileID: -1998274699, guid: bfda70a2c5758d847ac7991fdd537057, type: 3}
-    - time: 0.8666667
+    - time: 0.9166667
       value: {fileID: -383087678, guid: bfda70a2c5758d847ac7991fdd537057, type: 3}
     attribute: m_Sprite
-    path: DonaRosa
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -41,7 +41,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1066348394
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8833333
+    m_StopTime: 0.93333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
